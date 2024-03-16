@@ -211,9 +211,19 @@ get_Todos()
     })
     .catch((err) => console.log(err));
 
-addTodo.addEventListener("click", () => {
-    if (inputTodo.value !== "" && inputDescrip.value !== "" && inputFecha.value !== "") {
-        post_Todo();
-    }
-});
+    addTodo.addEventListener("click", async () => {
+        if (inputTodo.value !== "" && inputDescrip.value !== "" && inputFecha.value !== "") {
+            await post_Todo(); // Esperamos a que se agregue la tarea correctamente
+            // Después de agregar la tarea, volvemos a obtener todas las tareas y las representamos en la interfaz de usuario
+            const updatedTodos = await get_Todos();
+            todoArray = updatedTodos;
+            todoContainer.innerHTML = ""; // Limpiamos el contenedor de tareas
+            display_Todos(todoArray); // Representamos todas las tareas nuevamente
+            // También limpiamos los campos de entrada después de agregar una tarea
+            inputTodo.value = "";
+            inputDescrip.value = "";
+            inputFecha.value = "";
+        }
+    });
+    
       

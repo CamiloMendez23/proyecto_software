@@ -9,52 +9,39 @@
 </head>
 
 <body>
-    <h1>BIENVENIDO</h1>
-    <!-- Agrega la barra de búsqueda -->
-    <input id="search-input" type="text" placeholder="Buscar por título, descripción o fecha"><br> 
-    <button id="search-button">Buscar</button><br>
-
-    <form class="input-container">
-        <input id="input-todo" type="text" placeholder="Ingrese titulo">
-        <input id="input-descrip" type="text" placeholder="Ingrese descripcion">
-        <input id="input-fecha" type="text" placeholder="Ingrese fecha">
-        <button id="add-todo" type="submit">Agregar Tarea</button>
-    </form>
-    <div class="todo-container">
-        <!-- <div class="todo">
-            <div class="todo-info">
-        
-                <div class="todo-details">
-                    <p class="todo-titulo">titulo visual</p>
-                    <p class="todo-descrip">descrip visual</p>
-                    <p class="todo-fecha">fecha visual</p>
-                </div>
-            </div>
-            <form class="todo-btn">
-                <input type="checkbox" class="todo-completed" checked>
-                <button class="todo-edit">Editar</button>
-                <button class="todo-delete">Eliminar</button>
-            </form>
-        </div> -->
+    <h1>BIENVENIDOS</h1>
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Buscar Notas</h2>
+            <!-- Barra de búsqueda -->
+            <input id="search-input" type="text" placeholder="Buscar por título, descripción o fecha">
+            <button id="search-button">Buscar</button><br><br>
+            <!-- Campos de entrada -->
+            <input id="input-todo" type="text" placeholder="Ingrese título">
+            <input id="input-descrip" type="text" placeholder="Ingrese descripción">
+            <input id="input-fecha" type="text" placeholder="Ingrese fecha">
+            <button id="add-todo" type="submit">Agregar Tarea</button>
+        </div>
+        <div class="todo-container">
+            <!-- Contenedor de notas -->
+        </div>
     </div>
-    
     <div class="modal-background">
-            <div class="modal">
-                <div class="modal-top">
-                    <h1>Editar tarea</h1>
-                    <span class="close-modal" id="close-modal">&#x2715;</span>
-                </div>
-                    <form class="modal-bottom">
-                        <input type="text" id="edit-todo-titulo" placeholder="ingrese titulo nuevo">
-                        <input type="text" id="edit-todo-descrip" placeholder="ingrese descripcion nuevo">
-                        <input type="text" id="edit-todo-fecha" placeholder="ingrese fecha nuevo">
-                            <div id="edit-todo-completed-wrapper">
-                                <input type="checkbox" id="edit-todo-completed"> Completado
-                            </div>
-                        <button id="save-todo">Listo</button>
-                    </form>
+        <div class="modal">
+            <div class="modal-top">
+                <h1>Editar tarea</h1>
+                <span class="close-modal" id="close-modal">&#x2715;</span>
             </div>
-    </div>
+            <form class="modal-bottom">
+                <input type="text" id="edit-todo-titulo" placeholder="Ingrese título nuevo">
+                <input type="text" id="edit-todo-descrip" placeholder="Ingrese descripción nueva">
+                <input type="text" id="edit-todo-fecha" placeholder="Ingrese fecha nueva">
+                <div id="edit-todo-completed-wrapper">
+                    <input type="checkbox" id="edit-todo-completed"> Completado
+                </div>
+                <button id="save-todo">Listo</button>
+            </form>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
