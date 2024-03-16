@@ -18,7 +18,7 @@ const searchButton = document.getElementById("search-button");
 
 let todoArray = [];
 
-const URL = "http://localhost:3004/todos";
+const URL = "http://localhost:3005/todos";
 
 
 async function get_Todos() {
@@ -69,29 +69,27 @@ async function del_Todo(todoElem) {
 
 async function edit_Todo(todoElem) {
     try {
-      let edit_url = URL + "/" + todoElem.id;
-      let options = {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: todoElem.id,
-          titulo: editTodoTitulo.value,
-          descripcion: editTodoDescrip.value,
-          fecha:editTodoFecha.value,
-          completed: editTodoCompleted.checked,
-        }),
-      };
-      const resp = await fetch(edit_url, options);
-      const data = await resp.json();
-
-      
-      return data;
+        let edit_url = URL + "/" + todoElem._id; // Aquí debes usar _id en lugar de id
+        let options = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                titulo: editTodoTitulo.value,
+                descripcion: editTodoDescrip.value,
+                fecha: editTodoFecha.value,
+                completed: editTodoCompleted.checked,
+            }),
+        };
+        const resp = await fetch(edit_url, options);
+        const data = await resp.json();
+        return data;
     } catch (err) {
-      return err;
+        return err;
     }
 }
+
 
 function open_modal(todoElem) {
     editTodoTitulo.value= todoElem.titulo;
