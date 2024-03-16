@@ -172,7 +172,35 @@ function display_Todos(todoArr) {
 });
 }
 
+// Función para filtrar las notas según la búsqueda
+function filterTodos(searchTerm) {
+    return todoArray.filter(todo => {
+        const titleMatch = todo.titulo.toLowerCase().includes(searchTerm.toLowerCase());
+        const descriptionMatch = todo.descripcion.toLowerCase().includes(searchTerm.toLowerCase());
+        const dateMatch = todo.fecha.toLowerCase().includes(searchTerm.toLowerCase());
+        return titleMatch || descriptionMatch || dateMatch;
+    });
+}
 
+// Event listener para el botón de búsqueda
+searchButton.addEventListener("click", () => {
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm !== "") {
+        const filteredTodos = filterTodos(searchTerm);
+        todoContainer.innerHTML = ""; // Limpiar el contenedor antes de mostrar los resultados filtrados
+        display_Todos(filteredTodos);
+    } else {
+        todoContainer.innerHTML = ""; // Limpiar el contenedor si la búsqueda está vacía
+        display_Todos(todoArray); // Mostrar todas las notas si la búsqueda está vacía
+    }
+});
+
+// Event listener para la tecla Enter en el input de búsqueda
+searchInput.addEventListener("keypress", event => {
+    if (event.key === "Enter") {
+        searchButton.click();
+    }
+});
 
 
 get_Todos()
