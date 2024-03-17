@@ -69,7 +69,7 @@ async function del_Todo(todoElem) {
 
 async function edit_Todo(todoElem) {
     try {
-        let edit_url = URL + "/" + todoElem._id; // Aquí debes usar _id en lugar de id
+        let edit_url = URL + "/" + todoElem._id; 
         let options = {
             method: "PUT",
             headers: {
@@ -185,11 +185,11 @@ searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value.trim();
     if (searchTerm !== "") {
         const filteredTodos = filterTodos(searchTerm);
-        todoContainer.innerHTML = ""; // Limpiar el contenedor antes de mostrar los resultados filtrados
+        todoContainer.innerHTML = ""; 
         display_Todos(filteredTodos);
     } else {
-        todoContainer.innerHTML = ""; // Limpiar el contenedor si la búsqueda está vacía
-        display_Todos(todoArray); // Mostrar todas las notas si la búsqueda está vacía
+        todoContainer.innerHTML = ""; 
+        display_Todos(todoArray); 
     }
 });
 
@@ -211,13 +211,13 @@ get_Todos()
 
     addTodo.addEventListener("click", async () => {
         if (inputTodo.value !== "" && inputDescrip.value !== "" && inputFecha.value !== "") {
-            await post_Todo(); // Esperamos a que se agregue la tarea correctamente
-            // Después de agregar la tarea, volvemos a obtener todas las tareas y las representamos en la interfaz de usuario
+            await post_Todo(); 
+            
             const updatedTodos = await get_Todos();
             todoArray = updatedTodos;
-            todoContainer.innerHTML = ""; // Limpiamos el contenedor de tareas
-            display_Todos(todoArray); // Representamos todas las tareas nuevamente
-            // También limpiamos los campos de entrada después de agregar una tarea
+            todoContainer.innerHTML = ""; 
+            display_Todos(todoArray); 
+          
             inputTodo.value = "";
             inputDescrip.value = "";
             inputFecha.value = "";

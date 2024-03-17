@@ -1,27 +1,27 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; 
+    justify-content: center; 
     background-color: rgb(52, 149, 240);
-    height: 100vh; /* Altura completa de la ventana */
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    height: 100vh; 
+    margin: 0; 
     flex-direction: column;
     align-items: center;
 }
 
 .main-container {
     display: flex;
-    flex-direction: row; /* Alineación horizontal de los elementos */
-    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor principal */
-    width: 90%; /* Anchura del contenedor principal */
+    flex-direction: row;
+    justify-content: center; 
+    width: 90%;
     margin-top: 20px;
 }
 
 .sidebar {
-    width: 30%; /* Anchura del sidebar */
-    margin-right: 20px; /* Margen derecho para separar el sidebar del contenedor de notas */
-    padding: 20px; /* Espaciado interior del sidebar */
+    width: 30%; 
+    margin-right: 20px; 
+    padding: 20px;
     background-color: rgb(194, 36, 241);
     border-radius: 10px;
 }
@@ -86,47 +86,47 @@ body {
     flex-direction: column;
     gap: 10px;
 
-    width: 70%; /* Anchura del contenedor de notas */
+    width: 70%; 
     background-color: rgb(19, 21, 173);
     border-radius: 10px;
-    padding: 20px; /* Espaciado interior del contenedor de notas */
-    overflow-y: auto; /* Desplazamiento vertical automático si el contenido excede el área visible */
-    max-height: 70vh; /* Altura máxima del contenedor de notas */
+    padding: 20px; 
+    overflow-y: auto; 
+    max-height: 70vh; 
 }
 
 
   .todo-container::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px; 
 }
 
 .todo-container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2); /* Color del pulgar de la barra de desplazamiento */
-    border-radius: 5px; /* Radio de borde del pulgar de la barra de desplazamiento */
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
 }
 
 .todo-container::-webkit-scrollbar-track {
-    background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+    background-color: transparent; 
 }
 
-/* Estilos adicionales para los elementos de entrada */
+
 input[type="text"] {
-    width: calc(100% - 22px); /* Ancho del input */
-    height: 30px; /* Altura del input */
-    margin-bottom: 10px; /* Margen inferior entre los inputs */
-    padding: 5px; /* Espaciado interior del input */
-    border: 1px solid #ccc; /* Borde del input */
-    border-radius: 5px; /* Radio de borde del input */
+    width: calc(100% - 22px); 
+    height: 30px; 
+    margin-bottom: 10px; 
+    padding: 5px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
 }
 
 button[type="submit"] {
-    width: calc(100% - 22px); /* Ancho del botón */
-    height: 40px; /* Altura del botón */
-    margin-top: 10px; /* Margen superior entre el botón y los inputs */
-    background-color: rgb(26, 221, 52); /* Color de fondo del botón */
-    border: none; /* Sin borde */
-    border-radius: 8px; /* Radio de borde del botón */
-    font-size: 1rem; /* Tamaño de la fuente del botón */
-    cursor: pointer; /* Cambio de cursor al pasar por encima del botón */
+    width: calc(100% - 22px); 
+    height: 40px;
+    margin-top: 10px; 
+    background-color: rgb(26, 221, 52); 
+    border: none;
+    border-radius: 8px; 
+    font-size: 1rem; 
+    cursor: pointer;
 }
 
 
@@ -151,23 +151,23 @@ button[type="submit"] {
   }
 
   .todo-completed {
-    margin-right: 10px; /* Agrega margen entre el checkbox y los detalles */
+    margin-right: 10px; 
     width: 30px;
     height: 25px;
 }
 
 .todo-details {
-    flex-grow: 8; /* Hace que los detalles ocupen todo el espacio disponible */
+    flex-grow: 8; 
 }
 
 .todo-titulo,
 .todo-descrip,
 .todo-fecha {
-    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+    margin: 0; 
 }
 
 .todo-completed {
-    margin-right: 150px; /* Ajusta el margen del checkbox */
+    margin-right: 150px; 
 }
   
   .todo-btn {
@@ -215,15 +215,15 @@ button[type="submit"] {
     width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centramos horizontalmente */
+    align-items: center; 
   }
   
   .modal-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ajustamos el ancho para que ocupe todo el espacio disponible */
-    margin-bottom: 20px; /* Espacio entre la parte superior y el contenido */
+    width: 100%; 
+    margin-bottom: 20px; 
   }
   
   .close-modal {
