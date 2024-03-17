@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>BIENVENIDOS</h1>
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Buscar Notas</h2>
+            <!-- Barra de búsqueda -->
+            <input id="search-input" type="text" placeholder="Buscar por título, descripción o fecha">
+            <button id="search-button">Buscar</button><br><br>
+            <!-- Campos de entrada -->
+            <input id="input-todo" type="text" placeholder="Ingrese título">
+            <input id="input-descrip" type="text" placeholder="Ingrese descripción">
+            <input id="input-fecha" type="text" placeholder="Ingrese fecha">
+            <button id="add-todo" type="submit">Agregar Tarea</button>
+        </div>
+        <div class="todo-container">
+            <!-- Contenedor de notas -->
+        </div>
+    </div>
+    <div class="modal-background">
+        <div class="modal">
+            <div class="modal-top">
+                <h1>Editar tarea</h1>
+                <span class="close-modal" id="close-modal">&#x2715;</span>
+            </div>
+            <form class="modal-bottom">
+                <input type="text" id="edit-todo-titulo" placeholder="Ingrese título nuevo">
+                <input type="text" id="edit-todo-descrip" placeholder="Ingrese descripción nueva">
+                <input type="text" id="edit-todo-fecha" placeholder="Ingrese fecha nueva">
+                <div id="edit-todo-completed-wrapper">
+                    <input type="checkbox" id="edit-todo-completed"> Completado
+                </div>
+                <button id="save-todo">Listo</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
