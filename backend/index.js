@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-//Puerto
+//Puerto 
 const PORT = 3005;
 
 app.use(express.json());
