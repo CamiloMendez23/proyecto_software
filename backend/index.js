@@ -18,7 +18,7 @@ mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: 
 const todoSchema = new mongoose.Schema({
     titulo: String,
     descripcion: String,
-    fecha: String,
+    fecha: Date,
     completed: Boolean
 });
 
