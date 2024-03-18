@@ -261,3 +261,17 @@ button[type="submit"] {
   #edit-todo-completed-wrapper {
     font-size: 1.2rem;
   }
+
+  /* Estilo para el contenedor de bienvenida */
+.welcome-container {
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    transform: translateY(-50%);
+}
+
+/* Estilo para la imagen de bienvenida */
+.welcome-container img {
+    max-width: 40%;
+    height: auto;
+}
