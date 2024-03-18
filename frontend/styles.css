@@ -262,7 +262,7 @@ button[type="submit"] {
     font-size: 1.2rem;
   }
 
-
+/* PARA TODO TIPO DE MOVILES*/
   @media only screen and (max-width: 768px) {
     .main-container {
         flex-direction: column;
@@ -292,47 +292,47 @@ button[type="submit"] {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .main-container {
-      width: 90%;
-  }
+    .main-container {
+        width: 90%;
+    }
 
-  .sidebar {
-      width: 40%;
-  }
+    .sidebar {
+        width: 40%;
+    }
 
-  .todo-container {
-      width: 60%;
-  }
+    .todo-container {
+        width: 60%;
+    }
 
-  #search-input,
-  #input-todo,
-  #input-descrip,
-  #input-fecha,
-  #add-todo,
-  #search-button {
-      width: 80%;
-  }
+    #search-input,
+    #input-todo,
+    #input-descrip,
+    #input-fecha,
+    #add-todo,
+    #search-button {
+        width: 80%;
+    }
 }
-
+/* PARA TODO TIPO DE TABLETS*/
 @media only screen and (min-width: 1025px) and (max-width: 1366px) {
-  .main-container {
-      width: 70%;
-  }
+    .main-container {
+        width: 70%;
+    }
 
-  .sidebar {
-      width: 30%;
-  }
+    .sidebar {
+        width: 30%;
+    }
 
-  .todo-container {
-      width: 70%;
-  }
+    .todo-container {
+        width: 70%;
+    }
 
-  #search-input,
-  #input-todo,
-  #input-descrip,
-  #input-fecha,
-  #add-todo,
-  #search-button {
-      width: 70%;
-  }
+    #search-input,
+    #input-todo,
+    #input-descrip,
+    #input-fecha,
+    #add-todo,
+    #search-button {
+        width: 70%;
+    }
 }
