@@ -18,8 +18,9 @@ mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: 
 const todoSchema = new mongoose.Schema({
     titulo: String,
     descripcion: String,
-    fecha: Date,
-    completed: Boolean
+    fecha:new Date(),
+    completed: Boolean,
+    tiempo_estimado: Int16Array
 });
 
 // Crear el modelo
