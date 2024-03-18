@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List App</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,6 +21,7 @@
             <input id="input-todo" type="text" placeholder="Ingrese título">
             <input id="input-descrip" type="text" placeholder="Ingrese descripción">
             <input id="input-fecha" type="text" placeholder="Ingrese fecha">
+            <input id="input-tiempo" type="number" placeholder="Tiempo estimado en completar (en minutos)">
             <button id="add-todo" type="submit">Agregar Tarea</button>
         </div>
         <div class="todo-container">
@@ -36,6 +38,7 @@
                 <input type="text" id="edit-todo-titulo" placeholder="Ingrese título nuevo">
                 <input type="text" id="edit-todo-descrip" placeholder="Ingrese descripción nueva">
                 <input type="text" id="edit-todo-fecha" placeholder="Ingrese fecha nueva">
+                <input type="number" id="edit-todo-hora" placeholder="Tiempo estimado en completar (en minutos)">
                 <div id="edit-todo-completed-wrapper">
                     <input type="checkbox" id="edit-todo-completed"> Completado
                 </div>
@@ -43,7 +46,15 @@
             </form>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#input-fecha").datepicker();
+            $("#edit-todo-fecha").datepicker();
+        });
+    </script>
 </body>
 
 </html>
