@@ -19,6 +19,7 @@ const todoSchema = new mongoose.Schema({
     titulo: String,
     descripcion: String,
     fecha: String,
+    tiempoEstimado: Number,
     completed: Boolean
 });
 
@@ -59,12 +60,17 @@ app.post("/todos", async (req, res) => {
 
 app.put("/todos/:id", async (req, res) => {
     try {
-        const todo = await Todo.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const todo = await Todo.findByIdAndUpdate(
+            req.params.id,
+            { $set: req.body }, 
+            { new: true }
+        );
         res.json(todo);
     } catch (error) {
         res.status(404).json({ msg: "Todo not found" });
     }
 });
+
 
 app.delete("/todos/:id", async (req, res) => {
     try {
