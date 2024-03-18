@@ -19,11 +19,11 @@ body {
 }
 
 .sidebar {
-    width: 30%; 
-    margin-right: 20px; 
-    padding: 20px;
-    background-color: rgb(75, 51, 213);
-    border-radius: 10px;
+  width: 30%; 
+  margin-right: 20px; 
+  padding: 20px;
+  background-color: rgb(36, 91, 241);
+  border-radius: 10px;
 }
 
   
@@ -261,3 +261,31 @@ button[type="submit"] {
   #edit-todo-completed-wrapper {
     font-size: 1.2rem;
   }
+
+  
+  @media only screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #search-input,
+    #input-todo,
+    #input-descrip,
+    #input-fecha,
+    #add-todo,
+    #search-button {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .modal {
+        width: 90%;
+    }
+}
