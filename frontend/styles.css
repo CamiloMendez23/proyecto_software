@@ -262,7 +262,7 @@ button[type="submit"] {
     font-size: 1.2rem;
   }
 
-  
+
   @media only screen and (max-width: 768px) {
     .main-container {
         flex-direction: column;
@@ -288,4 +288,51 @@ button[type="submit"] {
     .modal {
         width: 90%;
     }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+      width: 90%;
+  }
+
+  .sidebar {
+      width: 40%;
+  }
+
+  .todo-container {
+      width: 60%;
+  }
+
+  #search-input,
+  #input-todo,
+  #input-descrip,
+  #input-fecha,
+  #add-todo,
+  #search-button {
+      width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  .main-container {
+      width: 70%;
+  }
+
+  .sidebar {
+      width: 30%;
+  }
+
+  .todo-container {
+      width: 70%;
+  }
+
+  #search-input,
+  #input-todo,
+  #input-descrip,
+  #input-fecha,
+  #add-todo,
+  #search-button {
+      width: 70%;
+  }
 }
