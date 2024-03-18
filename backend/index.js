@@ -20,7 +20,7 @@ const todoSchema = new mongoose.Schema({
     descripcion: String,
     fecha:new Date(),
     completed: Boolean,
-    tiempo_estimado: Int16Array
+    tiempo_estimado: { type: Number, default: 0 }
 });
 
 // Crear el modelo
